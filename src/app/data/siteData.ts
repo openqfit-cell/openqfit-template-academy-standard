@@ -47,10 +47,10 @@ export const siteConfig: SiteConfig = {
     fullAddress: '서울특별시 강남구 청담동 123-45 청담타워',
     // Google Maps iframe embed URL
     // Get this from Google Maps > Share > Embed a map > copy src URL only
-    googleMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2954074838185!2d127.03288301531362!3d37.49983467981156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15a4c1d92e1%3A0x4a580c87a87e664d!2sGangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1234567890',
+    googleMapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6330.882367633331!2d127.0180146697754!3d37.49751140000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15a2cc3f2a7%3A0xd2e44a2795272fca!2z6rCV64Ko7Jet!5e0!3m2!1sko!2skr!4v1774879454333!5m2!1sko!2skr',
     // External map links
-    googleMapLink: 'https://www.google.com/maps/search/%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C+123',
-    naverMapLink: 'https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%ED%85%8C%ED%97%A4%EB%9E%80%EB%A1%9C%20123',
+    googleMapLink: 'https://maps.app.goo.gl/9G3jmroxcBC7rQt96',
+    naverMapLink: 'https://naver.me/FM1XyM8D',
   },
   
   // Business hours

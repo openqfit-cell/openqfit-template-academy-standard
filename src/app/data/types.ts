@@ -199,15 +199,7 @@ export interface ContactContent {
 
 export interface FooterContent {
   description: string;
-  quickLinks: NavItem[];
-  legal: Array<{
-    label: string;
-    href: string;
-  }>;
-  sectionTitles: {
-    quickLinks: string;
-    contact: string;
-  };
+  socialLinks: SocialLink[];
   copyright: string;
 }
 
