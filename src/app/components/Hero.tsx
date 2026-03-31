@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-28">
+    <section className="relative bg-gradient-to-b from-gray-50 to-white mb-8 lg:mb-0">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Column: Content */}
