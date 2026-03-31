@@ -6,13 +6,12 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 to-white mb-8 lg:mb-0">
-      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <section className="relative bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto px-10 py-16 sm:py-24 lg:py-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Column: Content */}
           <div className="order-1 text-center lg:text-left">
-
             <div className="absolute inset-0 w-full h-full lg:hidden">
               <img
                 src={heroData.image.src}
@@ -47,7 +46,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative z-10 flex flex-col lg:flex-row gap-4 mb-12">
+              className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <a
                 href="#contact"
                 className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2 font-semibold text-lg shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30"
