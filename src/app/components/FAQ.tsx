@@ -1,10 +1,11 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
 import { faqData } from '../data/faqData';
+import { AnimatedSection } from './AnimatedSection';
 
 export function FAQ() {
   return (
-    <section className="py-16 md:py-20 bg-gray-50">
+    <AnimatedSection delay={0.05} className="py-16 md:py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">자주 묻는 질문</h2>
@@ -16,7 +17,7 @@ export function FAQ() {
             <Accordion.Item
               key={faq.question}
               value={faq.question}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden"
+              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
             >
               <Accordion.Header>
                 <Accordion.Trigger className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors group">
@@ -43,6 +44,6 @@ export function FAQ() {
           </a>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -1,5 +1,6 @@
 import { Calendar, Clock, MapPin, DollarSign } from 'lucide-react';
 import { scheduleInfoData, pricingData } from '../data/scheduleData';
+import { AnimatedSection } from './AnimatedSection';
 
 const iconMap = {
   '수업 기간': Calendar,
@@ -9,7 +10,7 @@ const iconMap = {
 
 export function Schedule() {
   return (
-    <section className="py-16 md:py-20 bg-gray-50">
+    <AnimatedSection delay={0.05} className="py-16 md:py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">수업 정보</h2>
@@ -23,7 +24,7 @@ export function Schedule() {
             return (
               <div 
                 key={info.label}
-                className="bg-white border border-gray-200 rounded-lg p-5"
+                className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -95,6 +96,6 @@ export function Schedule() {
           </p>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

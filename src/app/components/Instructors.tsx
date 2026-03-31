@@ -1,10 +1,10 @@
 import { Award, BookOpen, GraduationCap, CheckCircle2 } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { instructorsData, teachingPhilosophy } from '../data/instructorsData';
+import { AnimatedSection } from './AnimatedSection';
 
 export function Instructors() {
   return (
-    <section id="instructors" className="py-16 md:py-20 bg-white">
+    <AnimatedSection id="instructors" delay={0.05} className="py-16 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">강사진</h2>
@@ -15,13 +15,13 @@ export function Instructors() {
           {instructorsData.map((instructor) => (
             <div 
               key={instructor.name}
-              className="bg-white border-2 border-gray-200 rounded-lg p-6 md:p-7"
+              className="bg-white border-2 border-gray-200 rounded-lg p-6 md:p-7 hover:border-blue-600 transition-colors"
             >
               <div className="flex flex-col sm:flex-row gap-6">
                 {/* Profile Image */}
                 <div className="flex-shrink-0">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 bg-gray-200 rounded-lg overflow-hidden">
-                    <ImageWithFallback 
+                  <div className="aspect-[1/1] sm:w-32 sm:h-32 bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                    <img 
                       src={instructor.image}
                       alt={instructor.name}
                       className="w-full h-full object-cover"
@@ -85,7 +85,7 @@ export function Instructors() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6">
+        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
           <h3 className="font-bold text-gray-900 mb-4 text-lg">강사진의 교육 철학</h3>
           <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
             {teachingPhilosophy.map((item) => (
@@ -97,6 +97,6 @@ export function Instructors() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

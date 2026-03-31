@@ -1,9 +1,10 @@
 import { Check } from 'lucide-react';
 import { curriculumStages, curriculumFeatures } from '../data/curriculumData';
+import { AnimatedSection } from './AnimatedSection';
 
 export function Curriculum() {
   return (
-    <section id="curriculum" className="py-16 md:py-20 bg-gray-50">
+    <AnimatedSection id="curriculum" delay={0.05} className="py-16 md:py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">커리큘럼</h2>
@@ -42,7 +43,7 @@ export function Curriculum() {
           ))}
         </div>
 
-        <div className="mt-10 bg-white border border-gray-200 rounded-lg p-6">
+        <div className="mt-10 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
           <h3 className="font-bold text-gray-900 mb-4">커리큘럼 특징</h3>
           <div className="grid sm:grid-cols-2 gap-4 text-gray-700">
             {curriculumFeatures.map((feature) => (
@@ -54,6 +55,6 @@ export function Curriculum() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

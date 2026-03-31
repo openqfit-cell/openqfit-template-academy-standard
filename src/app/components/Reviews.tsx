@@ -1,9 +1,10 @@
 import { Star, Quote } from 'lucide-react';
 import { reviewsData, reviewStatsData } from '../data/reviewsData';
+import { AnimatedSection } from './AnimatedSection';
 
 export function Reviews() {
   return (
-    <section id="reviews" className="py-16 md:py-20 bg-white">
+    <AnimatedSection id="reviews" delay={0.05} className="py-16 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">수강 후기</h2>
@@ -14,7 +15,7 @@ export function Reviews() {
           {reviewsData.map((review) => (
             <div 
               key={`${review.name}-${review.course}-${review.date}`}
-              className="bg-white border border-gray-200 rounded-lg p-6"
+              className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
@@ -47,15 +48,15 @@ export function Reviews() {
         </div>
 
         {/* Statistics */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 ">
           {reviewStatsData.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</p>
+              <p className="text-3xl font-bold text-blue-600 mb-2 scale-100 hover:scale-115">{stat.value}</p>
               <p className="text-gray-600">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

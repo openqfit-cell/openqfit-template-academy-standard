@@ -1,5 +1,6 @@
 import { BookOpen, Users, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
 import { classCategoriesData, classCategoriesSectionData } from '../data/classCategoriesData';
+import { AnimatedSection } from './AnimatedSection';
 
 const iconMap = {
   '기초 과정': BookOpen,
@@ -10,7 +11,7 @@ const iconMap = {
 
 export function ClassCategories() {
   return (
-    <section id="classes" className="py-16 md:py-20 bg-white">
+    <AnimatedSection id="classes" delay={0.05} className="py-16 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">{classCategoriesSectionData.title}</h2>
@@ -75,6 +76,6 @@ export function ClassCategories() {
           </a>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

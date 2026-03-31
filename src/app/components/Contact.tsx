@@ -1,6 +1,7 @@
 import { MapPin, Phone, Clock, Mail, ExternalLink, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../data/siteData';
 import { transportationInfoData, contactContent } from '../data/contactData';
+import { AnimatedSection } from './AnimatedSection';
 
 export function Contact() {
   const googleMapsUrl = siteConfig.map.googleMapLink;
@@ -8,7 +9,7 @@ export function Contact() {
   const googleMapsEmbedUrl = siteConfig.map.googleMapEmbedUrl || null;
   
   return (
-    <section id="contact" className="py-16 md:py-20 bg-white">
+    <AnimatedSection id="contact" delay={0.05} amount={0.05} className="py-16 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">{contactContent.sectionTitle}</h2>
@@ -190,7 +191,7 @@ export function Contact() {
         </div>
 
         {/* Directions */}
-        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6">
+        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
           <h3 className="font-bold text-gray-900 mb-5 text-lg">{contactContent.transportationTitle}</h3>
           <div className="grid sm:grid-cols-2 gap-6 text-gray-700">
             {transportationInfoData.map((item) => (
@@ -202,6 +203,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
