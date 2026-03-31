@@ -100,7 +100,7 @@ export function Hero() {
               <img
                 src={heroData.image.src}
                 alt={heroData.image.alt}
-                className="w-full h-full object-cover aspect-[4/3]"
+                className="w-full h-full object-cover"
               />
             </motion.div>
           </div>
