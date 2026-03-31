@@ -71,7 +71,7 @@ export function ClassCategories() {
           </p>
           <a 
             href="#contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium">
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm">
             {classCategoriesSectionData.cta.buttonText}
           </a>
         </div>

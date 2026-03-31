@@ -38,7 +38,7 @@ export function FAQ() {
           <p className="text-gray-700 mb-4">추가 문의사항이 있으신가요?</p>
           <a 
             href="#contact" 
-            className="inline-block bg-blue-600 text-white px-6 py-2.5 rounded-md hover:bg-blue-700 transition-colors"
+            className="inline-block bg-blue-600 text-white px-6 py-2.5 rounded-md hover:bg-blue-700 transition-colors transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
           >
             문의하기
           </a>

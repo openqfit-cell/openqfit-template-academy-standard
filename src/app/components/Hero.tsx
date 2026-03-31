@@ -49,14 +49,14 @@ export function Hero() {
               className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <a
                 href="#contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2 font-semibold text-lg shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30"
+                className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2 font-semibold text-lg shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-1"
               >
                 <Phone className="w-5 h-5" />
                 {siteConfig.cta.primary}
               </a>
               <a
                 href="#classes"
-                className="bg-white text-gray-900 px-8 py-4 rounded-xl border-2 border-gray-300 hover:border-blue-600 hover:text-blue-600 transition-all flex items-center justify-center gap-2 font-semibold text-lg"
+                className="bg-white text-gray-900 px-8 py-4 rounded-xl border-2 border-gray-300 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm flex items-center justify-center gap-2 font-semibold text-lg"
               >
                 수업 과정 보기
                 <ArrowRight className="w-5 h-5" />
