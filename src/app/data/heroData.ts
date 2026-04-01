@@ -22,7 +22,7 @@ export const heroData: HeroContent = {
   // Trust statistics
   stats: [
     { value: '15년', label: '교육 경력' },
-    { value: '1,500+', label: '수강생' },
+    { value: '1500+', label: '수강생' },
     { value: '98%', label: '수강 만족도' },
   ],
 };

@@ -1,6 +1,7 @@
 import { Star, Quote } from 'lucide-react';
 import { reviewsData, reviewStatsData } from '../data/reviewsData';
 import { AnimatedSection } from './AnimatedSection';
+import { CountUp } from "./CountUp";
 
 export function Reviews() {
   return (
@@ -51,7 +52,7 @@ export function Reviews() {
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 ">
           {reviewStatsData.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl font-bold text-blue-600 mb-2 scale-100 hover:scale-115">{stat.value}</p>
+              <p className="text-3xl font-bold text-blue-600 mb-2 scale-100 hover:scale-115"><CountUp value={stat.value} /></p>
               <p className="text-gray-600">{stat.label}</p>
             </div>
           ))}

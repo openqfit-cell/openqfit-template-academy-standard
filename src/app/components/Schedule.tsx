@@ -1,6 +1,7 @@
 import { Calendar, Clock, MapPin, DollarSign } from 'lucide-react';
 import { scheduleInfoData, pricingData } from '../data/scheduleData';
 import { AnimatedSection } from './AnimatedSection';
+import { CountUp } from "./CountUp";
 
 const iconMap = {
   '수업 기간': Calendar,
@@ -58,7 +59,7 @@ export function Schedule() {
                 <div className="mb-4">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
                   <div className="flex items-baseline gap-2 mb-3">
-                    <span className="text-2xl font-bold text-blue-600">{item.price}</span>
+                    <span className="text-2xl font-bold text-blue-600"><CountUp value={item.price} /></span>
                   </div>
                   <div className="flex gap-3 text-sm text-gray-600">
                     <span className="flex items-center gap-1">

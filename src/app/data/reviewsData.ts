@@ -44,7 +44,7 @@ export const reviewsData: Review[] = [
 
 export const reviewStatsData: ReviewStat[] = [
   { value: '98%', label: '수강 만족도' },
-  { value: '1,500+', label: '누적 수강생' },
+  { value: '1500+', label: '누적 수강생' },
   { value: '92%', label: '목표 달성률' },
   { value: '85%', label: '재등록률' },
 ];

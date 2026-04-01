@@ -1,8 +1,8 @@
 import { Phone, Award, Users, TrendingUp, ArrowRight } from 'lucide-react';
 import { heroData } from '../data/heroData';
 import { siteConfig } from '../data/siteData';
-import { AnimatedSection } from './AnimatedSection';
 import { motion } from "motion/react";
+import { CountUp } from "./CountUp";
 
 export function Hero() {
   return (
@@ -79,7 +79,7 @@ export function Hero() {
                       <Icon className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-gray-100 lg:text-gray-900">{stat.value}</p>
+                      <p className="text-2xl font-bold text-gray-100 lg:text-gray-900 hover:scale-115"><CountUp value={stat.value} /></p>
                       <p className="text-sm text-gray-400 lg:text-gray-600">{stat.label}</p>
                     </div>
                   </div>
