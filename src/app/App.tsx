@@ -8,6 +8,7 @@ import { Reviews } from './components/Reviews';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { ScrollIndicator } from './components/ScrollIndicator';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollIndicator />
     </div>
   );
 }

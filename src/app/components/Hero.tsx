@@ -2,7 +2,7 @@ import { Phone, Award, Users, TrendingUp, ArrowRight } from 'lucide-react';
 import { heroData } from '../data/heroData';
 import { siteConfig } from '../data/siteData';
 import { AnimatedSection } from './AnimatedSection';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 
 export function Hero() {
   return (
