@@ -59,7 +59,7 @@ export function Hero() {
                 className="bg-white text-gray-900 px-8 py-4 border-2 border-gray-300 hover:border-blue-600 rounded-xl hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm flex items-center justify-center gap-2 font-semibold text-lg"
               >
                 <ArrowRight className="w-5 h-5" />
-                {siteConfig.cta.short}
+                {siteConfig.cta.secondary}
               </a>
             </motion.div>
 
