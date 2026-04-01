@@ -83,7 +83,7 @@ export function Header() {
                 className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-all flex items-center gap-2 duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
               >
                 <Phone className="w-4 h-4" />
-                {siteConfig.cta.primary}
+                {siteConfig.cta.short}
               </a>
 
               {/* Mobile menu button */}
@@ -114,7 +114,7 @@ export function Header() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 py-3 px-3 rounded-lg transition-colors"
+                    className="text-center text-gray-700 hover:text-blue-600 hover:bg-gray-100 py-3 px-3 rounded-lg transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
