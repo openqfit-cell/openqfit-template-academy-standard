@@ -88,7 +88,7 @@ export function Contact() {
                         href={naverMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
                         {contactContent.buttons.naverMap}
@@ -97,7 +97,7 @@ export function Contact() {
                         href={googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
                         {contactContent.buttons.googleMap}
@@ -120,7 +120,7 @@ export function Contact() {
               <div className="space-y-2">
                 <a
                   href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-                  className="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center gap-2"
+                  className="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 font-medium flex items-center justify-center gap-2"
                 >
                   <Phone className="w-4 h-4" />
                   {contactContent.buttons.phoneConsultation}
@@ -129,14 +129,14 @@ export function Contact() {
                   href={siteConfig.kakaoTalkUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-yellow-400 text-gray-900 px-6 py-3.5 rounded-lg hover:bg-yellow-500 transition-colors font-medium flex items-center justify-center gap-2"
+                  className="w-full bg-yellow-400 text-gray-900 px-6 py-3.5 rounded-lg hover:bg-yellow-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 font-medium flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
                   {contactContent.buttons.kakaoConsultation}
                 </a>
                 <a
                   href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(`[${siteConfig.siteName}] 수강 상담 신청`)}&body=${encodeURIComponent('상담 신청합니다.\n\n이름:\n연락처:\n관심 과정:\n문의사항:')}`}
-                  className="w-full bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium flex items-center justify-center gap-2"
+                  className="w-full bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 font-medium flex items-center justify-center gap-2"
                 >
                   <Mail className="w-4 h-4" />
                   {contactContent.buttons.emailInquiry}
@@ -170,7 +170,7 @@ export function Contact() {
                     href={naverMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+                    className="flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-sm font-medium"
                   >
                     <ExternalLink className="w-4 h-4" />
                     {contactContent.buttons.naverMap}
@@ -179,7 +179,7 @@ export function Contact() {
                     href={googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                    className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-sm font-medium"
                   >
                     <ExternalLink className="w-4 h-4" />
                     {contactContent.buttons.googleMap}
