@@ -69,7 +69,7 @@ export function Header() {
             <div className="hidden lg:block">
               <a
                 href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-                className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
+                className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all flex items-center gap-2 duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
               >
                 <Phone className="w-4 h-4" />
                 {siteConfig.cta.primary}
@@ -80,10 +80,10 @@ export function Header() {
             <div className="flex lg:hidden items-center gap-3">
               <a
                 href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
+                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-all flex items-center gap-2 duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
               >
                 <Phone className="w-4 h-4" />
-                {siteConfig.cta.short}
+                {siteConfig.cta.primary}
               </a>
 
               {/* Mobile menu button */}

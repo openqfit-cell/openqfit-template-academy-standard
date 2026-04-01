@@ -20,9 +20,9 @@ export function FAQ() {
               className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
             >
               <Accordion.Header>
-                <Accordion.Trigger className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors group">
+                <Accordion.Trigger className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-all group">
                   <span className="font-bold text-gray-900 pr-4">{faq.question}</span>
-                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                 </Accordion.Trigger>
               </Accordion.Header>
               <Accordion.Content className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
@@ -38,7 +38,7 @@ export function FAQ() {
           <p className="text-gray-700 mb-4">추가 문의사항이 있으신가요?</p>
           <a 
             href="#contact" 
-            className="inline-block bg-blue-600 text-white px-6 py-2.5 rounded-md hover:bg-blue-700 transition-colors transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
+            className="inline-block bg-blue-600 text-white px-6 py-2.5 rounded-md hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
           >
             문의하기
           </a>
