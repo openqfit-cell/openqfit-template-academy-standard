@@ -48,7 +48,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <a
-                href="#contact"
+                href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
                 className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all flex items-center justify-center gap-2 font-semibold text-lg shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-1"
               >
                 <Phone className="w-5 h-5" />
