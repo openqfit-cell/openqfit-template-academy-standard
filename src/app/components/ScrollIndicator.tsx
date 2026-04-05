@@ -1,3 +1,8 @@
+/**
+ * ScrollIndicator.tsx
+ * --------------------------------------------------
+ * 사용자가 다음 구간으로 이동하거나 맨 위로 복귀할 수 있게 돕는 스크롤 보조 버튼입니다.
+ */
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 

@@ -1,5 +1,10 @@
+/**
+ * Curriculum.tsx
+ * --------------------------------------------------
+ * 커리큘럼 단계와 학습 특징을 보여주는 섹션입니다.
+ */
 import { Check } from 'lucide-react';
-import { curriculumStages, curriculumFeatures } from '../data/curriculumData';
+import { curriculumStages, curriculumFeatures } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 
 export function Curriculum() {

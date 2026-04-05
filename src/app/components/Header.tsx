@@ -1,6 +1,11 @@
+/**
+ * Header.tsx
+ * --------------------------------------------------
+ * 상단 헤더와 모바일 메뉴를 담당하는 컴포넌트입니다.
+ */
 import { Menu, Phone, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { siteConfig, navItems } from '../data/siteData';
+import { siteConfig, navItems } from '../data/data';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

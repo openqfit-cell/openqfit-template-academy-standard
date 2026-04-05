@@ -1,6 +1,11 @@
+/**
+ * Contact.tsx
+ * --------------------------------------------------
+ * 오시는 길 / 연락처 / 지도 / 상담 CTA를 보여주는 섹션입니다.
+ */
 import { MapPin, Phone, Clock, Mail, ExternalLink, MessageCircle } from 'lucide-react';
-import { siteConfig } from '../data/siteData';
-import { transportationInfoData, contactContent } from '../data/contactData';
+import { siteConfig } from '../data/data';
+import { transportationInfoData, contactContent } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 
 export function Contact() {

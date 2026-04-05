@@ -1,5 +1,10 @@
-import { siteConfig } from '../data/siteData';
-import { footerData } from '../data/footerData';
+/**
+ * Footer.tsx
+ * --------------------------------------------------
+ * 사이트 하단 정보와 소셜 링크를 출력하는 푸터 컴포넌트입니다.
+ */
+import { siteConfig } from '../data/data';
+import { footerData } from '../data/data';
 
 export function Footer() {
   return (

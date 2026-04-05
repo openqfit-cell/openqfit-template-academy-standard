@@ -1,3 +1,8 @@
+/**
+ * AnimatedSection.tsx
+ * --------------------------------------------------
+ * 각 섹션이 스크롤에 맞춰 자연스럽게 나타나도록 공통 모션을 제공하는 래퍼 컴포넌트입니다.
+ */
 import { ReactNode } from "react";
 import { motion } from "motion/react";
 

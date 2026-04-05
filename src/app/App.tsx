@@ -1,3 +1,9 @@
+/**
+ * App.tsx
+ * --------------------------------------------------
+ * 아카데미형 표준 템플릿의 전체 페이지 조립 파일입니다.
+ * 섹션 순서를 여기서 관리합니다.
+ */
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ClassCategories } from './components/ClassCategories';

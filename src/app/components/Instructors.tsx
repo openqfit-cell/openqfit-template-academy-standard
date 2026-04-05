@@ -1,5 +1,10 @@
+/**
+ * Instructors.tsx
+ * --------------------------------------------------
+ * 강사진 소개와 교육 철학을 보여주는 섹션입니다.
+ */
 import { Award, BookOpen, GraduationCap, CheckCircle2 } from 'lucide-react';
-import { instructorsData, teachingPhilosophy } from '../data/instructorsData';
+import { instructorsData, teachingPhilosophy } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 
 export function Instructors() {

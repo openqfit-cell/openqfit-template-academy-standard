@@ -1,3 +1,8 @@
+/**
+ * CountUp.tsx
+ * --------------------------------------------------
+ * 숫자 또는 숫자형 문자열을 자연스럽게 카운트업 표시하는 공통 컴포넌트입니다.
+ */
 import { useEffect, useState, useRef } from "react";
 import { useInView } from "motion/react";
 

@@ -1,6 +1,11 @@
+/**
+ * FAQ.tsx
+ * --------------------------------------------------
+ * 자주 묻는 질문을 아코디언 형식으로 보여주는 섹션입니다.
+ */
 import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
-import { faqData } from '../data/faqData';
+import { faqData } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 
 export function FAQ() {

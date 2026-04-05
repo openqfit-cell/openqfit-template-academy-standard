@@ -1,6 +1,11 @@
+/**
+ * Hero.tsx
+ * --------------------------------------------------
+ * 첫 화면 핵심 메시지, CTA, 신뢰 수치를 보여주는 히어로 섹션입니다.
+ */
 import { Phone, Award, Users, TrendingUp, ArrowRight } from 'lucide-react';
-import { heroData } from '../data/heroData';
-import { siteConfig } from '../data/siteData';
+import { heroData } from '../data/data';
+import { siteConfig } from '../data/data';
 import { motion } from "motion/react";
 import { CountUp } from "./CountUp";
 

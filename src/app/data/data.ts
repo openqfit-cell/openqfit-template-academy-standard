@@ -1,0 +1,427 @@
+/**
+ * data.ts
+ * --------------------------------------------------
+ * 아카데미형 표준 템플릿의 모든 텍스트 / 링크 / 구조 데이터를 통합 관리하는 파일입니다.
+ * 
+ * 이 파일을 통합형으로 관리하는 이유
+ * - 고객 입력 JSON을 Cursor에서 한 번에 TS 구조로 변환하기 쉽습니다.
+ * - 데이터 파일이 여러 개로 흩어져 있을 때보다 유지보수가 훨씬 단순합니다.
+ * - 고객별 복제 프로젝트를 만들 때 data.ts만 교체하면 대부분의 내용 수정이 끝납니다.
+ * - 이미지 경로는 images.ts에서 별도 관리하여, 사진만 교체할 때 작업 범위를 분리합니다.
+ */
+
+import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { images } from './images';
+import type {
+  ClassCategory,
+  ClassCategoriesSection,
+  ContactContent,
+  CurriculumStage,
+  FAQ,
+  FooterContent,
+  HeroContent,
+  Instructor,
+  NavItem,
+  PricingItem,
+  Review,
+  ReviewStat,
+  ScheduleInfo,
+  SiteConfig,
+  TransportationInfo,
+} from './types';
+
+/**
+ * 사이트 전체 데이터 묶음
+ * --------------------------------------------------
+ * 필요 시 외부 JSON을 읽어 이 구조와 동일하게 매핑하면,
+ * 이후 컴포넌트는 수정 없이 같은 방식으로 재사용할 수 있습니다.
+ */
+export const siteData = {
+  /** 사이트 공통 설정 */
+  siteConfig: {
+    siteName: '청담아카데미',
+    image: images.logo,
+    phone: '02-1234-5678',
+    email: 'info@cheongdam-academy.com',
+    address: {
+      street: '서울특별시 강남구 청담동 123-45',
+      building: '청담타워 5층',
+      subway: '지하철 7호선 청담역 3번 출구 도보 5분',
+    },
+    map: {
+      lat: 37.5172,
+      lng: 127.0473,
+      fullAddress: '서울특별시 강남구 청담동 123-45 청담타워',
+      googleMapEmbedUrl:
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6330.882367633331!2d127.0180146697754!3d37.49751140000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15a2cc3f2a7%3A0xd2e44a2795272fca!2z6rCV64Ko7Jet!5e0!3m2!1sko!2skr!4v1774879454333!5m2!1sko!2skr',
+      googleMapLink: 'https://maps.app.goo.gl/9G3jmroxcBC7rQt96',
+      naverMapLink: 'https://naver.me/FM1XyM8D',
+    },
+    hours: {
+      weekday: '평일 09:00 - 21:00',
+      saturday: '토요일 09:00 - 18:00',
+      sunday: '일요일 및 공휴일 휴무',
+      consultationHours: '평일 09:00 - 20:00',
+    },
+    cta: {
+      primary: '수강 상담 신청',
+      secondary: '수업 과정 보기',
+      short: '상담',
+    },
+    kakaoTalkUrl: 'https://pf.kakao.com/_xexaGxj/chat',
+  } as SiteConfig,
+
+  /** 상단 메뉴 */
+  navItems: [
+    { label: '수업과정', href: '#classes' },
+    { label: '커리큘럼', href: '#curriculum' },
+    { label: '강사진', href: '#instructors' },
+    { label: '수강후기', href: '#reviews' },
+    { label: '오시는길', href: '#contact' },
+  ] as NavItem[],
+
+  /** 메인 히어로 섹션 */
+  hero: {
+    headline: '체계적인 커리큘럼으로',
+    headlineHighlight: '확실한 실력 향상',
+    headlineEnd: '을 약속합니다',
+    subheadline:
+      '15년 경력의 전문 강사진과 함께하는 맞춤형 교육. 기초부터 심화까지 단계별 학습으로 목표를 달성하세요.',
+    image: images.hero,
+    stats: [
+      { value: '15년', label: '교육 경력' },
+      { value: '1500+', label: '수강생' },
+      { value: '98%', label: '수강 만족도' },
+    ],
+  } as HeroContent,
+
+  /** 수업 과정 섹션 상단 문구 */
+  classCategoriesSection: {
+    title: '수업 과정',
+    subtitle: '수준과 목적에 맞는 다양한 과정을 제공합니다',
+    cta: {
+      description:
+        '어떤 과정이 적합한지 궁금하신가요? 무료 레벨 테스트를 통해 맞춤 과정을 추천해드립니다.',
+      buttonText: '상담 후 테스트 안내',
+    },
+  } as ClassCategoriesSection,
+
+  /** 수업 과정 카드 목록 */
+  classCategories: [
+    {
+      title: '기초 과정',
+      description: '처음 시작하는 분들을 위한 기본기 집중 과정',
+      duration: '3개월',
+      sessions: '주 2회',
+      targets: ['기초부터 배우고 싶은 학생', '체계적인 학습을 원하는 입문자', '기본기를 다지고 싶은 분'],
+    },
+    {
+      title: '심화 과정',
+      description: '기초를 다진 분들을 위한 실전 응용 과정',
+      duration: '4개월',
+      sessions: '주 3회',
+      targets: ['기초 과정 수료자', '실력 향상이 필요한 중급자', '실전 능력을 키우고 싶은 분'],
+    },
+    {
+      title: '그룹 수업',
+      description: '4-6명 소그룹으로 진행되는 협력 학습 과정',
+      duration: '3개월',
+      sessions: '주 2회',
+      targets: ['또래 친구들과 함께 배우고 싶은 학생', '합리적인 가격으로 수강하고 싶은 분', '그룹 활동을 선호하는 분'],
+    },
+    {
+      title: '1:1 맞춤',
+      description: '개인별 수준에 맞춘 완전 맞춤형 과정',
+      duration: '협의',
+      sessions: '협의',
+      targets: ['개인 맞춤 커리큘럼이 필요한 분', '집중 관리를 원하는 학생', '유연한 일정이 필요한 분'],
+    },
+  ] as ClassCategory[],
+
+  /** 커리큘럼 단계 */
+  curriculumStages: [
+    {
+      title: '기초 이론',
+      weeks: '1-4주차',
+      topics: ['기본 개념 이해 및 용어 정리', '기초 원리 학습', '실습 환경 구축', '기본 문제 풀이'],
+    },
+    {
+      title: '실습 과정',
+      weeks: '5-8주차',
+      topics: ['실전 예제 중심 학습', '다양한 유형 문제 해결', '프로젝트 기반 학습', '개인별 피드백'],
+    },
+    {
+      title: '심화 학습',
+      weeks: '9-12주차',
+      topics: ['고난도 문제 풀이', '응용력 향상 훈련', '실전 모의고사', '최종 프로젝트'],
+    },
+  ] as CurriculumStage[],
+
+  /** 커리큘럼 보조 강점 문구 */
+  curriculumFeatures: [
+    '수강생 수준에 따른 맞춤 진도 조절',
+    '매주 진도 확인 및 피드백 제공',
+    '복습 자료 및 과제 제공',
+    '수료 후 6개월 무료 질의응답',
+  ] as string[],
+
+  /** 강사진 소개 */
+  instructors: [
+    {
+      name: '김민수',
+      title: '대표강사',
+      experience: '15년 경력',
+      education: '서울대학교 교육학 석사',
+      specialties: ['기초 과정', '심화 과정', '입시 컨설팅'],
+      achievements: '전 대치동 유명학원 대표강사',
+      certifications: ['교원자격증 보유', '학습코칭 전문가', '교육부 인증 강사'],
+      image: images.instructors.main,
+    },
+    {
+      name: '박지영',
+      title: '수석강사',
+      experience: '12년 경력',
+      education: '연세대학교 교육학 박사',
+      specialties: ['1:1 맞춤', '그룹 수업', '학습 컨설팅'],
+      achievements: '교육부 우수강사 선정 (2024)',
+      certifications: ['교원자격증 보유', '심리상담사 2급', '학습전략 지도사'],
+      image: images.instructors.sub,
+    },
+  ] as Instructor[],
+
+  /** 강사진 운영 철학 */
+  teachingPhilosophy: [
+    '학생 개개인의 수준과 특성을 고려한 맞춤 지도',
+    '체계적인 학습 관리 및 정기적인 피드백 제공',
+    '학부모 상담을 통한 학습 진도 공유',
+    '장기적인 학습 계획 수립 및 목표 달성 지원',
+  ] as string[],
+
+  /** 수업 시간 / 위치 / 운영 정보 */
+  scheduleInfo: [
+    {
+      label: '수업 기간',
+      value: '월~금 상시 개강',
+      detail: '매월 첫째주 월요일 신규반 개강',
+    },
+    {
+      label: '수업 시간',
+      value: '오전반 / 오후반 / 저녁반',
+      detail: '오전 10:00 / 오후 14:00 / 저녁 19:00',
+    },
+    {
+      label: '수업 장소',
+      value: '강남구 청담동 본원',
+      detail: '지하철 7호선 청담역 3번 출구 도보 5분',
+    },
+  ] as ScheduleInfo[],
+
+  /** 수강료 카드 */
+  pricing: [
+    {
+      title: '기초 과정',
+      duration: '3개월',
+      frequency: '주 2회',
+      price: '450000원',
+      features: ['소그룹 수업 (4-6명)', '교재 제공', '월 1회 레벨 테스트'],
+    },
+    {
+      title: '심화 과정',
+      duration: '4개월',
+      frequency: '주 3회',
+      price: '720000원',
+      features: ['소그룹 수업 (4-6명)', '교재 + 부교재 제공', '월 2회 레벨 테스트'],
+    },
+    {
+      title: '그룹 수업',
+      duration: '3개월',
+      frequency: '주 2회',
+      price: '380000원',
+      features: ['정원 8-10명', '교재 제공', '분기별 평가'],
+    },
+    {
+      title: '1:1 맞춤',
+      duration: '협의',
+      frequency: '협의',
+      price: '상담 문의',
+      features: ['완전 맞춤 커리큘럼', '강사 선택 가능', '유연한 일정 조율'],
+    },
+  ] as PricingItem[],
+
+  /** 후기 카드 */
+  reviews: [
+    {
+      name: '김학생',
+      course: '심화 과정',
+      rating: 5,
+      date: '2026.02',
+      content:
+        '체계적인 커리큘럼과 세심한 피드백 덕분에 실력이 크게 향상되었습니다. 강사님의 열정적인 지도가 인상 깊었고, 목표했던 성과를 달성할 수 있었습니다.',
+      result: '목표 달성률 150%',
+    },
+    {
+      name: '박학부모',
+      course: '기초 과정',
+      rating: 5,
+      date: '2026.01',
+      content:
+        '아이가 처음에는 어려워했는데, 선생님께서 아이 눈높이에 맞춰 설명해주시니 점점 흥미를 갖게 되었습니다. 3개월 만에 확실한 변화가 보여 만족합니다.',
+      result: '학습 이해도 85%↑',
+    },
+    {
+      name: '이수강생',
+      course: '1:1 맞춤',
+      rating: 5,
+      date: '2025.12',
+      content:
+        '직장인이라 시간이 불규칙한데, 유연하게 스케줄 조정이 가능해서 좋았습니다. 개인 맞춤 수업이라 더 집중해서 배울 수 있었고 단기간에 실력이 늘었어요.',
+      result: '4개월 완성',
+    },
+    {
+      name: '최학생',
+      course: '그룹 수업',
+      rating: 5,
+      date: '2025.11',
+      content:
+        '같은 수준의 학생들과 함께 배우니 서로 자극도 되고 동기부여도 됩니다. 소그룹이라 질문하기도 편하고 강사님의 피드백도 충분히 받을 수 있어요.',
+      result: '그룹 1등 달성',
+    },
+  ] as Review[],
+
+  /** 후기 섹션 상단 요약 수치 */
+  reviewStats: [
+    { value: '98%', label: '수강 만족도' },
+    { value: '1500+', label: '누적 수강생' },
+    { value: '92%', label: '목표 달성률' },
+    { value: '85%', label: '재등록률' },
+  ] as ReviewStat[],
+
+  /** 자주 묻는 질문 */
+  faq: [
+    {
+      question: '수업은 어떻게 진행되나요?',
+      answer:
+        '1:1 맞춤 수업의 경우 학생의 수준을 먼저 파악한 후 개인별 맞춤 커리큘럼으로 진행됩니다. 그룹 수업은 4-6명의 소그룹으로 진행되며, 매 수업마다 이론 설명과 실습, 피드백이 함께 이루어집니다.',
+    },
+    {
+      question: '등록 전 상담이 가능한가요?',
+      answer:
+        '네, 가능합니다. 전화 상담 또는 방문 상담 모두 가능하며, 방문 상담 시 수업 환경과 교재를 직접 확인하실 수 있습니다. 상담은 사전 예약제로 운영되며, 평일 오전 10시부터 저녁 8시까지 가능합니다.',
+    },
+    {
+      question: '결제 방법은 어떻게 되나요?',
+      answer:
+        '현금, 카드, 계좌이체 모두 가능합니다. 수강료는 등록 시 일시불 결제가 원칙이며, 3개월 이상 과정의 경우 분할 결제도 가능합니다. 카드 무이자 할부도 제공됩니다.',
+    },
+    {
+      question: '중도 환불이 가능한가요?',
+      answer:
+        '학원법에 따라 수강 시작 전에는 전액 환불이 가능하며, 수강 시작 후에는 진행된 수업 일수를 제외한 나머지 금액이 환불됩니다. 자세한 환불 규정은 등록 시 안내해드립니다.',
+    },
+    {
+      question: '수업을 빠지면 보강이 가능한가요?',
+      answer:
+        '네, 가능합니다. 사전에 연락주시면 다른 시간대로 보강 수업을 안내해드립니다. 1:1 수업의 경우 강사님과 협의하여 일정을 조정할 수 있으며, 그룹 수업의 경우 주말 보강반을 운영하고 있습니다.',
+    },
+    {
+      question: '주차는 가능한가요?',
+      answer:
+        '학원 건물 지하에 주차장이 있으며, 2시간 무료 주차가 가능합니다. 주차 공간이 제한적이므로 가급적 대중교통 이용을 권장드립니다. 청담역 3번 출구에서 도보 5분 거리입니다.',
+    },
+  ] as FAQ[],
+
+  /** 문의 섹션 문구 */
+  contactContent: {
+    sectionTitle: '오시는 길',
+    sectionDescription: '청담아카데미를 방문해주세요',
+    consultationTitle: '상담 및 문의',
+    labels: {
+      phone: '전화번호',
+      email: '이메일',
+      hours: '운영시간',
+      address: '주소',
+    },
+    buttons: {
+      naverMap: '네이버 지도 보기',
+      googleMap: '구글 지도 보기',
+      phoneConsultation: '전화 상담 신청',
+      kakaoConsultation: '카카오톡 상담',
+      emailInquiry: '이메일 문의',
+    },
+    transportationTitle: '교통편 안내',
+    ctaDescription:
+      '전화 또는 방문 상담을 원하시면 아래 버튼을 클릭하세요.
+카카오톡 상담도 가능합니다.',
+  } as ContactContent,
+
+  /** 오시는 길 하단 교통 수단 안내 */
+  transportationInfo: [
+    {
+      icon: '🚇',
+      label: '지하철 이용',
+      detail: '7호선 청담역 3번 출구 → 직진 300m → 청담타워 (도보 5분)',
+    },
+    {
+      icon: '🚌',
+      label: '버스 이용',
+      detail: '간선버스: 140, 240, 341, 360
+지선버스: 4412, 6411',
+    },
+    {
+      icon: '🚗',
+      label: '자가용 이용',
+      detail: '건물 지하 주차장 이용 가능 (2시간 무료)',
+    },
+    {
+      icon: '📍',
+      label: '주요 건물',
+      detail: '청담역 3번 출구 → GS25 편의점 옆 골목 → 청담타워',
+    },
+  ] as TransportationInfo[],
+
+  /** 푸터 데이터 */
+  footer: {
+    description: '15년 경력의 전문 강사진과 함께하는 체계적인 교육 프로그램',
+    socialLinks: [
+      {
+        platform: 'Instagram',
+        url: 'https://instagram.com/',
+        icon: Instagram,
+      },
+      {
+        platform: 'Facebook',
+        url: 'https://facebook.com/',
+        icon: Facebook,
+      },
+      {
+        platform: 'Youtube',
+        url: 'https://youtube.com/',
+        icon: Youtube,
+      },
+    ],
+    copyright: '© 2026 청담아카데미. All rights reserved.',
+  } as FooterContent,
+};
+
+/**
+ * 아래 export들은 기존 컴포넌트가 단계적으로 옮겨갈 때도 쉽게 사용할 수 있도록 만든 별칭입니다.
+ * 이번 템플릿에서는 컴포넌트 import도 통합형으로 바꿨지만,
+ * 추후 다른 템플릿에서 일부만 재사용할 때도 편하게 사용할 수 있습니다.
+ */
+export const siteConfig = siteData.siteConfig;
+export const navItems = siteData.navItems;
+export const heroData = siteData.hero;
+export const classCategoriesSectionData = siteData.classCategoriesSection;
+export const classCategoriesData = siteData.classCategories;
+export const curriculumStages = siteData.curriculumStages;
+export const curriculumFeatures = siteData.curriculumFeatures;
+export const instructorsData = siteData.instructors;
+export const teachingPhilosophy = siteData.teachingPhilosophy;
+export const scheduleInfoData = siteData.scheduleInfo;
+export const pricingData = siteData.pricing;
+export const reviewsData = siteData.reviews;
+export const reviewStatsData = siteData.reviewStats;
+export const faqData = siteData.faq;
+export const contactContent = siteData.contactContent;
+export const transportationInfoData = siteData.transportationInfo;
+export const footerData = siteData.footer;

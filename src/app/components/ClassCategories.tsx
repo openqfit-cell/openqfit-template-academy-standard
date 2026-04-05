@@ -1,5 +1,11 @@
+/**
+ * ClassCategories.tsx
+ * --------------------------------------------------
+ * 수업 과정 소개 섹션입니다.
+ * data.ts 안의 classCategoriesSection / classCategories 데이터를 사용합니다.
+ */
 import { BookOpen, Users, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
-import { classCategoriesData, classCategoriesSectionData } from '../data/classCategoriesData';
+import { classCategoriesData, classCategoriesSectionData } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 
 const iconMap = {

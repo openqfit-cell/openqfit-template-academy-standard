@@ -1,5 +1,10 @@
+/**
+ * Schedule.tsx
+ * --------------------------------------------------
+ * 수업 일정과 수강료 안내를 보여주는 섹션입니다.
+ */
 import { Calendar, Clock, MapPin, DollarSign } from 'lucide-react';
-import { scheduleInfoData, pricingData } from '../data/scheduleData';
+import { scheduleInfoData, pricingData } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 import { CountUp } from "./CountUp";
 

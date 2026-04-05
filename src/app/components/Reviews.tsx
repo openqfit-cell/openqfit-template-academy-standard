@@ -1,5 +1,10 @@
+/**
+ * Reviews.tsx
+ * --------------------------------------------------
+ * 수강 후기와 주요 성과 지표를 보여주는 섹션입니다.
+ */
 import { Star, Quote } from 'lucide-react';
-import { reviewsData, reviewStatsData } from '../data/reviewsData';
+import { reviewsData, reviewStatsData } from '../data/data';
 import { AnimatedSection } from './AnimatedSection';
 import { CountUp } from "./CountUp";
 
