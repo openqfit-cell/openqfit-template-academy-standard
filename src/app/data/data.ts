@@ -350,8 +350,7 @@ export const siteData = {
     },
     transportationTitle: '교통편 안내',
     ctaDescription:
-      '전화 또는 방문 상담을 원하시면 아래 버튼을 클릭하세요.
-카카오톡 상담도 가능합니다.',
+      '전화 또는 방문 상담을 원하시면 아래 버튼을 클릭하세요. 카카오톡 상담도 가능합니다.',
   } as ContactContent,
 
   /** 오시는 길 하단 교통 수단 안내 */
@@ -364,8 +363,8 @@ export const siteData = {
     {
       icon: '🚌',
       label: '버스 이용',
-      detail: '간선버스: 140, 240, 341, 360
-지선버스: 4412, 6411',
+      detail: '간선버스: 140, 240, 341, 360',
+      지선버스: '4412, 6411',
     },
     {
       icon: '🚗',
